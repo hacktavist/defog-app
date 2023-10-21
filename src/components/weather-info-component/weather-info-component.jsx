@@ -11,7 +11,7 @@ function WeatherInfo({ zipCode }) {
     if (zipCode && zipCode.length === 5) {
       axios
         .get(
-          `https://api.tomorrow.io/v4/weather/realtime?location=${zipCode}&apikey=${process.env.REACT_APP_API_KEY}`
+          `https://api.tomorrow.io/v4/weather/realtime?location=${zipCode}&units=imperial&apikey=${process.env.REACT_APP_API_KEY}`
           //`https://api.tomorrow.io/v4/weather/realtime?location=${zipCode}&apikey=${API_KEY}`
         )
         .then((response) => {
