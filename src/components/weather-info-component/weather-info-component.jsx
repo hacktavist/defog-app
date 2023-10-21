@@ -5,13 +5,14 @@ function WeatherInfo({ zipCode }) {
   const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
-    const API_KEY = "YOUR_API_KEY_HERE";
+    // const API_KEY = "YOUR_API_KEY_HERE";
 
     // Check if zipCode is provided and not empty before making the API call
     if (zipCode && zipCode.length === 5) {
       axios
         .get(
-          `https://api.tomorrow.io/v4/weather/realtime?location=${zipCode}&apikey=${API_KEY}`
+          `https://api.tomorrow.io/v4/weather/realtime?location=${zipCode}&apikey=${process.env.REACT_APP_API_KEY}`
+          //`https://api.tomorrow.io/v4/weather/realtime?location=${zipCode}&apikey=${API_KEY}`
         )
         .then((response) => {
           setWeatherData(response.data);

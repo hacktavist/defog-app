@@ -9,4 +9,4 @@ With this project I wanted to be a little more granular with the information I g
 
 I had already had a previous conversation with ChatGPT about finding a weather api. It was structured very similarly to the conversation linked above.
 
-Use this like any other basic react app with an api: clone the repo; `npm install`, update the `API_Key` variable with your tomorrow.io api key in `weather-info-component.jsx` file, and `npm start`
+Use this like any other basic react app with an api: clone the repo; `npm install`, uncomment and update the `API_Key` variable with your tomorrow.io api key, comment out the first api call and uncomment the second api call in `weather-info-component.jsx` file, and `npm start`
