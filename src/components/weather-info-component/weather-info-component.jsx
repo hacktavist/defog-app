@@ -30,13 +30,13 @@ function WeatherInfo({ zipCode }) {
 
   // Function to determine the defogging method
   function determineDefoggingMethod(weatherData) {
-    const temperature = weatherData.temperature;
-    const humidity = weatherData.humidity;
-    const precipitation = weatherData.precipitation;
+    const temperature = weatherData.data.values.temperature;
+    const humidity = weatherData.data.values.humidity;
+    const precipitation = weatherData.data.values.precipitationProbability;
     const season = getSeason();
 
     if (temperature < 32) {
-      return handleLowTemperature(temperature, humidity, precipitation);
+      return handleLowTemperature(humidity, precipitation);
     }
 
     if (season === "Winter") {
@@ -44,13 +44,16 @@ function WeatherInfo({ zipCode }) {
     }
 
     if (season === "Summer") {
-      return handleSummerConditions(humidity, weatherData.visibility);
+      return handleSummerConditions(
+        humidity,
+        weatherData.data.values.visibility
+      );
     }
 
     return "No specific defogging method required at the moment.";
   }
 
-  function handleLowTemperature(temperature, humidity, precipitation) {
+  function handleLowTemperature(humidity, precipitation) {
     if (precipitation > 0) {
       return humidity > 80
         ? "Use front and rear window defrosters to clear ice and air conditioning with defrost to handle condensation from precipitation."
