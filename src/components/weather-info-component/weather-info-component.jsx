@@ -49,6 +49,9 @@ function WeatherInfo({ zipCode }) {
         weatherData.data.values.visibility
       );
     }
+    if (season === "Spring" || season === "Fall") {
+      return handleSpringAndFallConditions(humidity);
+    }
 
     return "No specific defogging method required at the moment.";
   }
@@ -82,6 +85,15 @@ function WeatherInfo({ zipCode }) {
     }
 
     return "No specific defogging method required at the moment.";
+  }
+
+  function handleSpringAndFallConditions(humidity) {
+    const recommendation =
+      humidity > 80
+        ? "Use air conditioning with defrost to remove condensation caused by seasonal humidity changes."
+        : "No specific defogging method required at the moment.";
+
+    return recommendation;
   }
 
   // Helper function to get the season based on the current month
