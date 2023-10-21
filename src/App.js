@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import WeatherInfo from "./components/weather-info-component/weather-info-component";
 
 function App() {
+  const [zipCode, setZipCode] = useState("");
+
+  const handleZipCodeChange = (event) => {
+    setZipCode(event.target.value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Weather Conditions and Defogging Method</h1>
+      <input
+        type="text"
+        placeholder="Enter 5-Digit Zip Code"
+        value={zipCode}
+        onChange={handleZipCodeChange}
+      />
+      <WeatherInfo zipCode={zipCode} />
     </div>
   );
 }

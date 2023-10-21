@@ -1,70 +1,12 @@
-# Getting Started with Create React App
+# Defog App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was put together utilizing ChatGPT.
+It is built with reactjs and uses the tomorrow.io weather api
 
-## Available Scripts
+I have been learning about using ChatGPT for getting an idea quickly realized and then modifiying it to meet my needs.
 
-In the project directory, you can run:
+With this project I wanted to be a little more granular with the information I gave to ChatGPT and see how close to a final product I could get. And for what I was looking to create it is pretty close. I wasn't looking for anything pretty, I just wanted to search some weather datapoints and decide what method would be best to keep my windshield clear from fog using that data. We could drill down more into what method to use and make it more sophisticated, but this was something that I wanted to put together for my personal use; it didn't need to be revolutionary. Here is the original [conversation with ChatGPT](https://chat.openai.com/share/27b4888e-2ad9-4822-97e7-b146d9a17ae1)
 
-### `npm start`
+I had already had a previous conversation with ChatGPT about finding a weather api. It was structured very similarly to the conversation linked above.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Use this like any other basic react app with an api: clone the repo; `npm install`, update the `API_Key` variable with your tomorrow.io api key in `weather-info-component.jsx` file, and `npm start`
